@@ -30,7 +30,7 @@ while True:
         conn.send(message.encode())
         print("\n")
         break
-conn.send(message.encode())
-message = conn.recv(1024)
-message = message.decode()
-print(s_name, ":", message)
+    conn.send(message.encode())
+    message = conn.recv(1024)
+    message = message.decode()
+    print(s_name, ":", message)
