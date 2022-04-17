@@ -12,10 +12,10 @@ def main():
     """ Connecting to the server. """
     client.connect(ADDR)
     """ Opening and reading the file data. """
-    file = open("assignment.txt", "r")
+    file = open("data/assignment.txt", "r")
     data = file.read()
     """ Sending the filename to the server. """
-    client.send("assignment.txt".encode(FORMAT))
+    client.send("lab assignment.txt".encode(FORMAT))
     msg = client.recv(SIZE).decode(FORMAT)
     print(f"[SERVER]: {msg}")
     """ Sending the file data to the server. """
